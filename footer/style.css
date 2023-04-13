@@ -1,0 +1,213 @@
+/* Box-sizing rules * */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin * */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+blockquote,
+strong,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed * */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults * */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Setting up core body defaults * */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default style * */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Making images easier to work with * */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them * */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Setting up the base styling of the site */
+/* -- Simplon Africa -- */
+:root {
+  --pb: #000000;
+  --noir: #232323;
+  --rouge: #ce0033;
+  --blanc: #ffffff;
+  --gris: #f8f8f8;
+  --frozen: #23b5d6;
+}
+
+/* Styling the body */
+body {
+  background-color: var(--frozen);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--noir);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Styling the footer */
+
+/* Newsletter */
+
+.footer--newsletter {
+  background-color: var(--gris);
+  padding-bottom: 1em;
+  padding-left: 6em;
+}
+
+.footer--newsletter h5 {
+  font-size: 1.5em;
+}
+
+.footer--newsletter input {
+  border: solid 1px var(--noir);
+  padding: 1em 200px 1em 30px;
+}
+
+.footer--newsletter button {
+  border: none;
+  background: transparent;
+}
+
+.footer--newsletter button > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--noir);
+  border: solid 1px var(--noir);
+  padding: 1em 2em;
+}
+
+/* Footer content */
+
+.footer--contenu {
+  display: flex;
+  color: var(--blanc);
+  background-color: var(--noir);
+  justify-content: space-between;
+  padding-bottom: 3em;
+  padding-inline: 6em;
+}
+
+.footer--contenu h5 {
+  color: var(--blanc);
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.footer--contenu ul {
+  list-style: none;
+}
+
+/* Left side of Footer */
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6em;
+}
+
+.social--links {
+  display: flex;
+  gap: 1em;
+}
+
+.social--links i {
+  font-size: 2em;
+}
+
+.social--links a {
+  color: var(--blanc);
+}
+
+.social--links a:hover {
+  color: var(--rouge);
+}
+
+/* Mid side of Footer */
+
+.footer--contact {
+  font-family: 'Nunito Sans', sans-serif;
+}
+/* Right side of Footer */
+
+.right {
+  margin-right: 6em;
+}
+
+.right ul a {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+.right ul a:hover {
+  text-decoration: underline;
+}
+
+/* Styling the bottom section in footer */
+.contenu--pub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: var(--rouge);
+  padding: 0 20%;
+}
+
+.contenu--pub h6 {
+  color: var(--blanc);
+}
